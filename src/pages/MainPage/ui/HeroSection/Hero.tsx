@@ -1,8 +1,10 @@
 import { styles } from "@/shared/const/styles.ts";
 import { motion } from "framer-motion";
 import { ComputersCanvas } from "@/shared/ui/canvas";
+import { Trans, useTranslation } from "react-i18next";
 
 export const Hero = () => {
+  const { t } = useTranslation();
   return (
     <section className={"relative max-w-7xl h-screen mx-auto"}>
       <div
@@ -22,10 +24,12 @@ export const Hero = () => {
         </div>
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
+            <Trans i18nKey={'greetings'}>
             Hi, I'm <span className={"text-[#915eff]"}>Daniel</span>
+            </Trans>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I develop web applications
+            {t("I develop web applications")}
           </p>
         </div>
       </div>

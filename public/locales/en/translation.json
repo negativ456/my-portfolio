@@ -5,7 +5,41 @@
   "Work": "Work",
   "My work": "My work",
   "Projects": "Projects",
-  "Projects_desc": "Following projects showcases my skills and experience through real-world examples of my work. Each project is briefly described with links to code repositories and live demos in it. It reflects my ability to solve complex problems, work with different technologies and manage projects effectively.",
+  "Projects_desc": "Following projects showcases my skills and experience through real-world examples of my work. Each project is briefly described with links to code repositories and live demos in it.",
   "What I have done so far": "What I have done so far",
-  "Work experience": "Work experience."
+  "Work experience": "Work experience.",
+  "Vue JS Developer": "Vue JS Developer",
+  "August 2022 - Present": "August 2022 - Present",
+  "Project configuration with Webpack": "Project configuration with Webpack",
+  "Writing unit tests": "Writing unit tests",
+  "Implementing responsive design and ensuring cross-browser compatibility.": "Implementing responsive design and ensuring cross-browser compatibility.",
+  "Implementing ui kit": "Implementing ui kit",
+  "I develop web applications": "I develop web applications",
+  "greetings": "Hi, I'm <1>Daniel</1>",
+  "Using Storybook": "Using Storybook",
+  "Your message": "Your message",
+  "Your email": "Your email",
+  "Your name": "Your name",
+  "Whats do you want to say ?": "Whats do you want to say ?",
+  "Send": "Send",
+  "Sending...": "Sending...",
+  "Introduction": "Introduction",
+  "Overview.": "Overview.",
+  "about": "I have been engaged in frontend development for 2 years, I have experience working with various frameworks such as: React, Vue JS and etc. I am a quick learner and I approach the implementation of projects responsibly. Let's work together to bring your ideas into the life!",
+  "name": "Daniel <1> | Fedorov</1>",
+  "Get in touch": "Get in touch",
+  "Contact.": "Contact.",
+  "projects": {
+    "course": "Web application created as the result of successful completion of advanced frontend course. Includes a lot of technics such as FSD architecture, async reducers, custom plugins",
+    "promptopia": "Web application that allows users to create prompts and share them. You can also search the prompt you want and visit others uses profile page.",
+    "sber": "The platform is a data markup service. There are such possibilities for marking up data as marking up images with the ability to choose an answer or your own description, uploading an image for a specific request and a possible description for it.",
+    "aton": "A web application created for an internship assignment at Aton. Angular JS was used as a framework together with the NgRx state manager. The following functionality was implemented: authorization, pagination, notification system.",
+    "portfolio": "Own portfolio website presenting general information about me, work experience, completed projects and a feedback form. The site also implements 3D elements using three js, internationalization of i18n and a feedback form using EmailJs"
+  },
+  "skill": {
+    "card1": "Web developer",
+    "card2": "Responsible",
+    "card3": "B2 level of English",
+    "card4": "Ready for learn"
+  }
 }

@@ -7,8 +7,7 @@ import { Project } from "@/entities/Project/model/types/project.ts";
 export const projects: Project[] = [
   {
     name: "Course app (ulbi tv)",
-    description:
-      "Web application created as the result of successful completion of advanced frontend course. Includes a lot of technics such as FSD architecture, async reducers, custom plugins",
+    description: "projects.course",
     tags: [
       {
         name: "react",
@@ -29,8 +28,7 @@ export const projects: Project[] = [
   },
   {
     name: "Promptopia",
-    description:
-      "A simple web application that allows users to create prompts and share them. You can also search the prompt you want and visit others uses profile page.",
+    description: "projects.promptopia",
     tags: [
       {
         name: "next",
@@ -51,8 +49,7 @@ export const projects: Project[] = [
   },
   {
     name: "Sber AI markup platform",
-    description:
-      "A platform to markup data. There are such markup options as: image markup, text description, image loading, as well as combinations. The task was set by the Sber AI team",
+    description: "projects.sber",
     tags: [
       {
         name: "vue js",
@@ -75,8 +72,7 @@ export const projects: Project[] = [
   },
   {
     name: "Aton internship task",
-    description:
-      "Simple application with authorization, pagination, notifications system. Created as the result of Aton internship task.",
+    description: "projects.aton",
     tags: [
       {
         name: "angular js",
@@ -97,8 +93,7 @@ export const projects: Project[] = [
   },
   {
     name: "Developer portfolio",
-    description:
-      "A developer portfolio including some three js models, internationalisation, feedback form. The architecture of the application is built on the basis of Feature-Sliced Design",
+    description: "projects.portfolio",
     tags: [
       {
         name: "react js",
@@ -118,5 +113,6 @@ export const projects: Project[] = [
       },
     ],
     image: portfoio,
+    source_code_link: "https://github.com/negativ456/my-portfolio",
   },
 ];

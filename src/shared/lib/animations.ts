@@ -42,7 +42,7 @@ export const fadeIn = (
   };
 };
 
-export const zoomIn = (delay, duration) => {
+export const zoomIn = (delay: number, duration: number) => {
   return {
     hidden: {
       scale: 0,

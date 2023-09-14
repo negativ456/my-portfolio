@@ -4,6 +4,7 @@ import { Project } from "@/entities/Project/model/types/project.ts";
 import ParallaxTilt from "react-parallax-tilt";
 import GithubIcon from "@/shared/assets/github.png";
 import DemoIcon from "@/shared/assets/demo.png";
+import { useTranslation } from "react-i18next";
 
 interface ProjectCardProps {
   index: number;
@@ -12,6 +13,7 @@ interface ProjectCardProps {
 
 export const ProjectCard = (props: ProjectCardProps) => {
   const { index, project } = props;
+  const { t } = useTranslation();
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <ParallaxTilt
@@ -32,7 +34,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
               "absolute inset-0 flex gap-2 justify-end m-3 card-img_hover"
             }
           >
-            {project.demo_link && (
+            {project.source_code_link && (
               <a
                 href={project.source_code_link}
                 target={"_blank"}
@@ -69,7 +71,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
         <div className={"mt-5"}>
           <h3 className={"text-white font-bold text-[24px]"}>{project.name}</h3>
           <p className={"mt-2 text-secondary text-[14px]"}>
-            {project.description}
+            {t(project.description)}
           </p>
         </div>
 

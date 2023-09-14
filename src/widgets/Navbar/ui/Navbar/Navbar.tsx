@@ -6,7 +6,7 @@ import CloseIcon from "@/shared/assets/close.svg";
 import { navLinks } from "@/widgets/Navbar/const/links.ts";
 import { useState } from "react";
 import { LangSwitcher } from "@/features/LangSwitcher";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
 export const Navbar = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -24,9 +24,13 @@ export const Navbar = () => {
         >
           <LogoIcon className={"w-9 h-9"} />
           <span
-            className={"text-white flex text-[18px] font-bold cursor-pointer"}
+            className={
+              "text-white flex text-[18px] font-bold cursor-pointer gap-1"
+            }
           >
-            Daniel <span className={"sm:block hidden"}>| Fedorov</span>
+            <Trans i18nKey={'name'}>
+              Daniel <span className={"sm:block hidden"}> | Fedorov</span>
+            </Trans>
           </span>
         </Link>
         <ul className={"list-none hidden sm:flex flex-row gap-10"}>

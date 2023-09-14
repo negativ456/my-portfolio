@@ -1,10 +1,12 @@
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import { Experience } from "@/entities/Experience/model/types/experienceTypes.ts";
+import { useTranslation } from "react-i18next";
 
 interface ExperienceCardProps {
   experience: Experience;
 }
 export const ExperienceCard = ({ experience }: ExperienceCardProps) => {
+  const { t } = useTranslation();
   return (
     <VerticalTimelineElement
       contentStyle={{
@@ -12,7 +14,7 @@ export const ExperienceCard = ({ experience }: ExperienceCardProps) => {
         color: "#fff",
       }}
       contentArrowStyle={{ borderRight: "7px solid  #232631" }}
-      date={experience.date}
+      date={t(experience.date)}
       iconStyle={{ background: experience.iconBg }}
       icon={
         <div className="flex justify-center items-center w-full h-full">
@@ -25,7 +27,9 @@ export const ExperienceCard = ({ experience }: ExperienceCardProps) => {
       }
     >
       <div>
-        <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
+        <h3 className="text-white text-[24px] font-bold">
+          {t(experience.title)}
+        </h3>
         <p
           className="text-secondary text-[16px] font-semibold"
           style={{ margin: 0 }}
@@ -40,7 +44,7 @@ export const ExperienceCard = ({ experience }: ExperienceCardProps) => {
             key={`experience-point-${index}`}
             className="text-white-100 text-[14px] pl-1 tracking-wider"
           >
-            {point}
+            {t(point)}
           </li>
         ))}
       </ul>

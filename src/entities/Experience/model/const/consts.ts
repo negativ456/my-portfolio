@@ -12,7 +12,8 @@ export const experiences: Experience[] = [
       "Project configuration with Webpack",
       "Writing unit tests",
       "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Implementing ui kit for ",
+      "Implementing ui kit",
+      "Using Storybook"
     ],
   },
 ];

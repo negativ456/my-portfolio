@@ -5,6 +5,7 @@ import { styles } from "@/shared/const/styles.ts";
 import React, { ChangeEvent, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { EarthCanvas } from "@/shared/ui/canvas";
+import { useTranslation } from "react-i18next";
 
 // template_d7kz03v
 
@@ -20,6 +21,7 @@ export const ContactForm = () => {
   const formRef = useRef(null);
   const [isLoading, setIsLoading] = useState(false);
   const [form, setForm] = useState<Form>({ name: "", email: "", message: "" });
+  const { t } = useTranslation();
 
   const onChangeForm = (
     event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -67,30 +69,19 @@ export const ContactForm = () => {
           className={"flex-[0.75] bg-black-100 p-8 rounded-2xl"}
           variants={slideIn("left", "tween", 0.2, 1)}
         >
-          <p className={styles.sectionSubText}>Get in touch</p>
-          <h3 className={styles.sectionHeadText}>Contact.</h3>
+          <p className={styles.sectionSubText}>{t('Get in touch')}</p>
+          <h3 className={styles.sectionHeadText}>{t('Contact.')}</h3>
           <form className={"mt-12 flex flex-col gap-8"} ref={formRef}>
             <label className={"flex flex-col"}>
-              <span className={"text-white font-medium mb-4"}>Your name</span>
+              <span className={"text-white font-medium mb-4"}>
+                {t("Your name")}
+              </span>
               <input
                 type={"text"}
                 name={"name"}
                 value={form.name}
                 onChange={onChangeForm}
-                placeholder={"Whats your name ?"}
-                className={
-                  "bg-tertiary py-4 px-6 border-none font-medium placeholder:text-secondary text-white rounded-lg outlined-none"
-                }
-              />
-            </label>
-            <label className={"flex flex-col"}>
-              <span className={"text-white font-medium mb-4"}>Your email</span>
-              <input
-                type={"email"}
-                name={"email"}
-                value={form.email}
-                onChange={onChangeForm}
-                placeholder={"Whats your email ?"}
+                placeholder={t("Your name")}
                 className={
                   "bg-tertiary py-4 px-6 border-none font-medium placeholder:text-secondary text-white rounded-lg outlined-none"
                 }
@@ -98,14 +89,29 @@ export const ContactForm = () => {
             </label>
             <label className={"flex flex-col"}>
               <span className={"text-white font-medium mb-4"}>
-                Your message
+                {t("Your email")}
+              </span>
+              <input
+                type={"email"}
+                name={"email"}
+                value={form.email}
+                onChange={onChangeForm}
+                placeholder={t("Your email")}
+                className={
+                  "bg-tertiary py-4 px-6 border-none font-medium placeholder:text-secondary text-white rounded-lg outlined-none"
+                }
+              />
+            </label>
+            <label className={"flex flex-col"}>
+              <span className={"text-white font-medium mb-4"}>
+                {t("Your message")}
               </span>
               <textarea
                 rows={7}
                 name={"message"}
                 value={form.message}
                 onChange={onChangeForm}
-                placeholder={"Whats do you want to say ?"}
+                placeholder={t("Whats do you want to say ?")}
                 className={
                   "bg-tertiary py-4 resize-none px-6 border-none font-medium placeholder:text-secondary text-white rounded-lg outlined-none"
                 }
@@ -119,7 +125,7 @@ export const ContactForm = () => {
               type={"submit"}
               onClick={onSubmit}
             >
-              {isLoading ? "Sending..." : "Send"}
+              {isLoading ? t("Sending...") : t("Send")}
             </button>
           </form>
         </motion.div>

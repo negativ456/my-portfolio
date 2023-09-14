@@ -2,12 +2,14 @@ import { Card } from "@/entities/Skill/model/types/cardTypes.ts";
 import ParallaxTilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/shared/lib/animations.ts";
+import { useTranslation } from "react-i18next";
 
 interface SkillCardProps {
   card: Card;
   index: number;
 }
 export const SkillCard = ({ card, index }: SkillCardProps) => {
+  const { t } = useTranslation();
   return (
     <motion.div
       className={"xs:w-[250px] w-full"}
@@ -31,7 +33,7 @@ export const SkillCard = ({ card, index }: SkillCardProps) => {
             className={"w-16 h-16 object-contain"}
           />
           <h3 className={"text-white text-[20px] font-bold text-center"}>
-            {card.name}
+            {t(card.name)}
           </h3>
         </div>
       </ParallaxTilt>
