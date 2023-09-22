@@ -1,11 +1,11 @@
 import { Experience } from "@/entities/Experience/model/types/experienceTypes.ts";
-import empire from "@/shared/assets/company/empire.svg";
+import freelance from "@/shared/assets/company/freelance.png";
 
 export const experiences: Experience[] = [
   {
-    title: "Vue JS Developer",
-    companyName: "Empire Technology",
-    icon: empire,
+    title: "Web developer",
+    companyName: "Freelance",
+    icon: freelance,
     iconBg: "#383E56",
     date: "August 2022 - Present",
     points: [
@@ -13,7 +13,8 @@ export const experiences: Experience[] = [
       "Writing unit tests",
       "Implementing responsive design and ensuring cross-browser compatibility.",
       "Implementing ui kit",
-      "Using Storybook"
+      "Using Storybook",
+      "Typing a project using Typescript",
     ],
   },
 ];
